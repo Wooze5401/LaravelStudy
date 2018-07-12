@@ -18,7 +18,7 @@ define('LARAVEL_START', microtime(true));
 | our application. We just need to utilize it! We'll simply require it
 | into the script here so that we don't have to worry about manual
 | loading any of our classes later on. It feels great to relax.
-|
+| compser提供类一个便利，自动化集合的加载类,只需要在这里require即可
 */
 
 require __DIR__.'/../vendor/autoload.php';
