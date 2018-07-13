@@ -7,6 +7,9 @@
                 <section class="status_form">
                     @include('shared._status_form')
                 </section>
+                <section class="stats">
+                    @include('shared._stats', ['user' => Auth::user()])
+                </section>
                 <h3>微博列表</h3>
                 @include('shared._feed')
             </div>

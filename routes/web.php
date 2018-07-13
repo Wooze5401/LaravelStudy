@@ -36,3 +36,9 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
 Route::resource('statuses','StatusesController',['only'=>['store','destroy']]);
+
+Route::get('/user/{user}/followings', 'UserController@followings')->name('user.followings');
+Route::get('/user/{user}/followers', 'UserController@followers')->name('user.followers');
+
+Route::post('/user/followers/{user}', 'FollowersController@store')->name('followers.store');
+Route::delete('/user/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
